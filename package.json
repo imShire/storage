@@ -1,6 +1,6 @@
 {
   "name": "ixu-storage",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "ixu-storage",
   "keywords": [
     "storage",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "npm:publish": "npm config set registry https://registry.npmjs.org/ && npm publish",
+    "npm:publish": "npm run build && npm config set registry https://registry.npmjs.org/ && npm publish",
     "prebuild": "rimraf dist",
     "build": "yarn && tsc --module commonjs && rollup -c rollup.config.ts",
     "start": "yarn && rollup -c rollup.config.ts -w",

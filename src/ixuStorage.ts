@@ -4,9 +4,11 @@ class IxuStorage {
     private readonly _prefix_: string;
     private readonly _Storage: any;
     private readonly _disabled: boolean;
+    private readonly version: string;
 
     constructor(Storage: Storage, prefix: string | number) {
         // _${prefix}_${key}
+        this.version = '1.0.4';
         this._Storage = Storage;
         this._disabled = this.hasLocalStorage();
         this._prefix_ = `_${String(prefix || DEFAULT_PREFIX).toUpperCase()}_`;
