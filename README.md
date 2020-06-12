@@ -4,13 +4,13 @@ a storage lib which support sessionStorage and localStorage with the same api
 ## Install
 
 ```
- npm install @shire/storage
+ npm install ixu-storage
 ```
 
 ## Usage
 
 ```
- import storage from '@shire/storage'
+ import storage from 'ixu-storage'
  
  // localStorage
  storage.set(key,val) 

@@ -1,11 +1,11 @@
 const DEFAULT_PREFIX = 'ixu.me';
 
 class IxuStorage {
-    private _prefix_: string;
-    private _Storage: any;
-    private _disabled: boolean;
+    private readonly _prefix_: string;
+    private readonly _Storage: any;
+    private readonly _disabled: boolean;
 
-    constructor(Storage, prefix: string | number) {
+    constructor(Storage: Storage, prefix: string | number) {
         // _${prefix}_${key}
         this._Storage = Storage;
         this._disabled = this.hasLocalStorage();
@@ -95,11 +95,11 @@ class IxuStorage {
     }
 }
 
-function serialize (val) {
+function serialize (val: any) {
     return JSON.stringify(val)
 }
 
-function deserialize (val) {
+function deserialize (val: any) {
     if (typeof val !== 'string') {
         return undefined
     }
