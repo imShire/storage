@@ -1,0 +1,11 @@
+module.exports = {
+    presets: [
+        [
+            '@babel/env',
+            {
+                modules: false
+                // ，我们设置 "modules": false ，否则 Babel 会在 Rollup 有机会做处理之前，将我们的模块转成 CommonJS ，导致 Rollup 的一些处理失败。
+            }
+        ]
+    ]
+};

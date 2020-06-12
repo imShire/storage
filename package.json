@@ -1,0 +1,40 @@
+{
+  "name": "ixu-storage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/ixu-storage.min.js",
+  "module": "dist/ixu-storage.esm.min.js",
+  "scripts": {
+    "build": "yarn && rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shire1025/storage.git"
+  },
+  "keywords": [
+    "web",
+    "localStorage",
+    "sessionStorage"
+  ],
+  "author": "Shire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shire1025/storage/issues"
+  },
+  "homepage": "https://github.com/shire1025/storage#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup": "^2.10.9",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "the-answer": "^1.0.0"
+  }
+}
