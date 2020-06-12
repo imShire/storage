@@ -1,5 +1,6 @@
+// @ts-ignore
+import { version } from '../package'
 const DEFAULT_PREFIX = 'ixu.me';
-
 class IxuStorage {
     private readonly _prefix_: string;
     private readonly _Storage: any;
@@ -8,11 +9,11 @@ class IxuStorage {
 
     constructor(Storage: Storage, prefix: string | number) {
         // _${prefix}_${key}
-        this.version = '1.0.4';
+        this.version = version;
         this._Storage = Storage;
         this._disabled = this.hasLocalStorage();
         this._prefix_ = `_${String(prefix || DEFAULT_PREFIX).toUpperCase()}_`;
-        console.log('Storage this._prefix', this._prefix_);
+        console.log('Storage this._prefix', Storage, this._prefix_);
         this.queryUseSize()
     }
 
