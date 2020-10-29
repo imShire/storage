@@ -11,12 +11,9 @@ class IxuStorage {
   private static instance: IxuStorage;
 
   static getInstance(Storage: Storage, prefix: string | number) {
-    // 判断是否已经new过1个实例
     if (!IxuStorage.instance) {
-      // 若这个唯一的实例不存在，那么先创建它
       IxuStorage.instance = new IxuStorage(Storage, prefix);
     }
-    // 如果这个唯一的实例已经存在，则直接返回
     return IxuStorage.instance
   }
 
