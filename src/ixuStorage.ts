@@ -94,7 +94,7 @@ class IxuStorage {
                 size += this._Storage.getItem(key).length;
             }
         }
-        console.log('当前localStorage剩余容量为' + (size / 1024).toFixed(2) + 'kb');
+        console.log(`当前${this._Storage}剩余容量为${(size / 1024).toFixed(2)}kb`);
     }
 }
 

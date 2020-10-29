@@ -14,7 +14,7 @@ function getInstance(options: { [x: string]: any; }) {
   // 判断是否已经new过1个实例
   if (!instance) {
     instance = new IxuStorage(window.localStorage, defaultOptions.prefix);
-    instance.prototype.session = new IxuStorage(window.sessionStorage, defaultOptions.prefix);
+    instance.session = new IxuStorage(window.sessionStorage, defaultOptions.prefix);
   }
   // 如果这个唯一的实例已经存在，则直接返回
   return instance;
