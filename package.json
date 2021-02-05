@@ -1,6 +1,6 @@
 {
   "name": "@ixu.me/storage",
-  "version": "1.1.7",
+  "version": "1.2.1",
   "description": "single storage",
   "keywords": [
     "storage",
@@ -26,7 +26,6 @@
     "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "npm:scope": "npm init --scope=@ixu.me -y",
     "npm:publish": "npm run build && npm config set registry http://registry.npmjs.org && npm publish --access=public",
-    "npm:publish:local": "npm run build && npm config set registry=http://47.107.60.51:4873 && npm publish --access=public",
     "prebuild": "rimraf dist",
     "build": "yarn && tsc --module commonjs && rollup -c rollup.config.ts",
     "start": "yarn && rollup -c rollup.config.ts -w",

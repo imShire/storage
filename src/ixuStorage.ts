@@ -8,14 +8,14 @@ class IxuStorage {
   private readonly _Storage: any;
   private readonly _disabled: boolean;
   private readonly version: string;
-  private static instance: IxuStorage;
+  // private static instance: IxuStorage;
 
-  static getInstance(Storage: Storage, prefix: string | number) {
-    if (!IxuStorage.instance) {
-      IxuStorage.instance = new IxuStorage(Storage, prefix);
-    }
-    return IxuStorage.instance
-  }
+  // static getInstance(Storage: Storage, prefix: string | number) {
+  //   if (!IxuStorage.instance) {
+  //     IxuStorage.instance = new IxuStorage(Storage, prefix);
+  //   }
+  //   return IxuStorage.instance
+  // }
 
   constructor(Storage: Storage, prefix: string | number) {
     // _${prefix}_${key}

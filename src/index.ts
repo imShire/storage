@@ -13,8 +13,8 @@ function getInstance(options: { [x: string]: any; }) {
   let instance: any;
   // 判断是否已经new过1个实例
   if (!instance) {
-    instance = IxuStorage.getInstance(window.localStorage, defaultOptions.prefix);
-    instance.session = IxuStorage.getInstance(window.sessionStorage, defaultOptions.prefix);
+    instance = new IxuStorage(window.localStorage, defaultOptions.prefix);
+    instance.session = new IxuStorage(window.sessionStorage, defaultOptions.prefix);
   }
   // 如果这个唯一的实例已经存在，则直接返回
   return instance;
