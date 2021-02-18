@@ -1,15 +1,15 @@
 {
   "name": "@ixu.me/storage",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "single storage",
   "keywords": [
     "storage",
     "localStorage",
     "sessionStorage"
   ],
-  "main": "dist/ixu-storage.umd.js",
-  "module": "dist/ixu-storage.es5.js",
-  "typings": "dist/types/ixu-storage.d.ts",
+  "main": "dist/storage.umd.js",
+  "module": "dist/storage.es5.js",
+  "typings": "dist/types/storage.d.ts",
   "files": [
     "dist"
   ],

@@ -1,9 +1,18 @@
 // @ts-ignore
 import {version} from '../package'
+import {DefaultValue} from './decorator'
+const DEFAULT_PREFIX = '_ixu.me_';
 
-const DEFAULT_PREFIX = 'ixu.me';
+/**
+ * 封装前缀
+ * @param prefix
+ */
+function privatePrefix(prefix: string | number) {
+  return prefix ? `_${String(prefix).toUpperCase()}_` : DEFAULT_PREFIX;
+}
 
 class IxuStorage {
+  @DefaultValue(DEFAULT_PREFIX)
   private readonly _prefix_: string;
   private readonly _Storage: any;
   private readonly _disabled: boolean;
@@ -22,7 +31,7 @@ class IxuStorage {
     this.version = version;
     this._Storage = Storage;
     this._disabled = this.hasLocalStorage();
-    this._prefix_ = `_${String(prefix || DEFAULT_PREFIX).toUpperCase()}_`;
+    this._prefix_ = privatePrefix(prefix);
     console.log('Storage this._prefix', Storage, this._prefix_);
     this.queryUseSize()
   }
