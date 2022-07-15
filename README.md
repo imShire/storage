@@ -11,7 +11,7 @@ a storage lib which support sessionStorage and localStorage with the same api
 
 ```
  import storage from '@ixu.me/storage'
- 
+ const storage = new Storage({ prefix: 'PAN' })
  // localStorage
  storage.set(key,val) 
  
